@@ -1,0 +1,15 @@
+[Unit]
+Description=Advent_im_Maerchenland Discord Bot
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/bot/Advent_im_Maerchenland
+ExecStart=/opt/bot/Advent_im_Maerchenland/start.sh
+Restart=on-failure
+RestartSec=5
+User=root
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
